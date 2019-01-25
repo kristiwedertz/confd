@@ -4,11 +4,8 @@ before_script:
 - docker -v
 - ls -la
 - whoami
-- sed "/aws_access_key_id = / s/$/$AWS_ACCESS_KEY_ID/" credentials | tee credentials
-- sed "/aws_secret_access_key_id = / s/$/$AWS_SECRET_ACCESS_KEY/" credentials | tee credentials
-- sed "/region = / s/$/$AWS_REGION/" credentials | tee credentials
+- ./aws-creds.sh
 - ls -la
-- mkdir ~/.aws && mv ./credentials ~/.aws/credentials
 - docker-compose up -d --build
 - ls -la target/
 script:
