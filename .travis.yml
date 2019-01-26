@@ -4,9 +4,9 @@ before_script:
 - docker -v
 - ls -la
 - whoami
-- pip install --user awscli
-- aws --version
-- export PATH=$PATH:$HOME/.local/bin
+  #- pip install --user awscli
+  #- aws --version
+  #- export PATH=$PATH:$HOME/.local/bin
 - ./aws-creds.sh
 - ls -la ~/.aws/
 - docker-compose up -d --build
