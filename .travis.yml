@@ -5,7 +5,7 @@ before_script:
 - ls -la
 - whoami
 - ./aws-creds.sh
-- ls -la
+- ls -la ~/.aws/
 - docker-compose up -d --build
 - ls -la target/
 script:
