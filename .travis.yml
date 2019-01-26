@@ -3,8 +3,7 @@ services:
 before_script:
 - docker -v
 - ls -la
-- whoami
-- "./aws-creds.sh"
+- chmod 0600 ~/.aws/credentials
 - ls -la ~/.aws/
 - docker-compose up -d --build
 - ls -la target/
