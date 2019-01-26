@@ -4,10 +4,10 @@ before_script:
 - docker -v
 - ls -la
 - whoami
-  #- ./aws-creds.sh
 - pip install --user awscli
 - export PATH=$PATH:$HOME/.local/bin
-  #- ls -la ~/.aws/
+- ./aws-creds.sh
+- ls -la ~/.aws/
 - docker-compose up -d --build
 - ls -la target/
 script:
