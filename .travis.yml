@@ -7,7 +7,7 @@ before_script:
   #- ./aws-creds.sh
 - pip install --user awscli
 - export PATH=$PATH:$HOME/.local/bin
-- ls -la ~/.aws/
+  #- ls -la ~/.aws/
 - docker-compose up -d --build
 - ls -la target/
 script:
