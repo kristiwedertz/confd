@@ -5,6 +5,8 @@ before_script:
 - ls -la
 - ./aws-creds.sh
 - chmod 0600 ~/.aws/credentials
+- pwd
+- ls -la
 - ls -la ~/.aws/
 - docker-compose up -d --build
 - ls -la target/
