@@ -5,6 +5,7 @@ before_script:
 - ls -la
 - whoami
 - pip install --user awscli
+- aws --version
 - export PATH=$PATH:$HOME/.local/bin
 - ./aws-creds.sh
 - ls -la ~/.aws/
