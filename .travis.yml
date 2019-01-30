@@ -13,7 +13,7 @@ before_script:
 - ls -la ~/.aws/
 - ls -la /usr/local/bin/
 - docker-compose up -d --build
-- docker exec -it confd_confd_1 sh -c "whoami && ls -la /target && confd -onetime -backend ssm -node=https://ssm.${AWS_REGION}.amazonaws.com && ls -la /target"
+- docker exec -it confd_confd_1 sh -c "echo $PATH && ls -la /target && confd -onetime -backend ssm -node=https://ssm.${AWS_REGION}.amazonaws.com && ls -la /target"
 - ls -la target/
   
 script:
