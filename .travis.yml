@@ -4,14 +4,14 @@ before_script:
 - docker -v
 - pip install --user awscli
 - export PATH=$PATH:$HOME/.local/bin
-- chown -R root:root ./target/
+- sudo chown -R root:root ./target/
 - ls -la
 - ./aws-creds.sh
 - chmod 0600 ~/.aws/credentials
 - pwd
 - ls -la
 - ls -la ~/.aws/
-- chown -R root:root ~/.aws/
+- sudo chown -R root:root ~/.aws/
 - ls -la ~/.aws/
 - docker-compose up -d --build
 - docker exec -it confd_confd_1 sh -c "pwd && ls -la && ls -la /root/.aws && ls -la target && ./usr/local/bin/entrypoint.sh"
