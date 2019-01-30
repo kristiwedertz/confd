@@ -8,11 +8,12 @@ before_script:
 - ./aws-creds.sh
 - chmod 0600 ~/.aws/credentials
 - pwd
-- echo $HOME
 - ls -la
 - ls -la ~/.aws/
 - docker-compose up -d --build
+- docker exec -it confd_confd_1 "pwd && ls -la $HOME/.aws/"
 - ls -la target/
+  
 script:
 - docker container ps | grep -q confd_confd_1
 env:
