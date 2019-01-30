@@ -11,7 +11,7 @@ before_script:
 - ls -la
 - ls -la ~/.aws/
 - docker-compose up -d --build
-- docker exec -it confd_confd_1 sh -c "pwd && ls -la && ls -la /root/.aws && ls -la target"
+- docker exec -it confd_confd_1 sh -c "pwd && ls -la && ls -la /root/.aws && ls -la target && ./usr/local/bin/entrypoint.sh"
 - ls -la target/
   
 script:
