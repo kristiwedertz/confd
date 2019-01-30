@@ -8,3 +8,4 @@ services:
       - $HOME/.aws:/root/.aws
     environment:
       - AWS_PROFILE
+      - PATH
