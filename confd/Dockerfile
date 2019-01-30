@@ -4,6 +4,10 @@ ENV ENVIRONMENT=demo
 ENV AWS_DEFAULT_REGION=us-west-2
 ENV AWS_REGION=us-west-2
 
+RUN echo $PATH \
+    export PATH="$PATH" \
+    echo $PATH 
+
 RUN apk --update --no-cache add ca-certificates
 
 ARG VERSION=0.16.0
