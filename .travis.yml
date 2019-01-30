@@ -11,7 +11,7 @@ before_script:
 - ls -la
 - ls -la ~/.aws/
 - docker-compose up -d --build
-- docker exec -it confd_confd_1 "/bin/bash ls -la $HOME/.aws/"
+- ls -la /
 - ls -la target/
   
 script:
