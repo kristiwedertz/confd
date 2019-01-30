@@ -3,10 +3,7 @@ FROM alpine:latest
 ENV ENVIRONMENT=demo
 ENV AWS_DEFAULT_REGION=us-west-2
 ENV AWS_REGION=us-west-2
-
-RUN echo $PATH \
-    export PATH="$PATH" \
-    echo $PATH 
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN apk --update --no-cache add ca-certificates
 
