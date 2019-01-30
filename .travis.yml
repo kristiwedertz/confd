@@ -2,8 +2,6 @@ services:
 - docker
 before_script:
 - docker -v
-- pip install --user awscli
-- export PATH=$PATH:$HOME/.local/bin
 - sudo chown -R root:root ./target/
 - ls -la
 - ./aws-creds.sh
@@ -15,7 +13,7 @@ before_script:
 - ls -la ~/.aws/
 - ls -la /usr/local/bin/
 - docker-compose up -d --build
-- docker exec -it confd_confd_1 sh -c "pwd && ls -la && ls -la /root/.aws && ls -la /etc/confd/conf.d/ && ls -la /etc/confd/templates/ && ls -la /target && ls -la /usr/local/bin/ && confd -onetime -backend ssm -node=https://ssm.${AWS_REGION}.amazonaws.com"
+- docker exec -it confd_confd_1 sh -c "whoami && ls -la /target && confd -onetime -backend ssm -node=https://ssm.${AWS_REGION}.amazonaws.com && ls -la /target"
 - ls -la target/
   
 script:
