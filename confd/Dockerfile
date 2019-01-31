@@ -13,6 +13,7 @@ RUN wget https://github.com/kelseyhightower/confd/releases/download/v${VERSION}/
 VOLUME [ "/target" ]
 
 COPY manifest /
+RUN ls -s /usr/local/bin/entrypoint.sh /
 
-#ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
-CMD [ "/bin/sh", "/usr/local/bin/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
+#CMD [ "/usr/local/bin/entrypoint.sh" ]
