@@ -8,7 +8,7 @@ before_script:
 - sudo chown -R root:root ~/.aws/
 - docker-compose up -d --build
 - docker container inspect confd_confd_1
-- docker exec -it confd_confd_1 sh -c "echo $PATH && ls -la /target"
+- docker exec -it confd_confd_1 sh -c "ls -la && ./entrypoint.sh && ls -la /target"
 - ls -la target/
   
 script:
