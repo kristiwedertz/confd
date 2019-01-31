@@ -8,4 +8,4 @@ services:
       - $HOME/.aws:/root/.aws
     environment:
       - AWS_PROFILE
-      - PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - ADD_PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
