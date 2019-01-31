@@ -14,5 +14,5 @@ VOLUME [ "/target" ]
 
 COPY manifest /
 
-ENTRYPOINT [ "/bin/sh", "/usr/local/bin/entrypoint.sh" ]
-#CMD [ "/usr/local/bin/entrypoint.sh" ]
+#ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
+CMD [ "/bin/sh", "/usr/local/bin/entrypoint.sh" ]
