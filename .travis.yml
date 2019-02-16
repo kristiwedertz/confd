@@ -6,9 +6,9 @@ before_script:
 - ./aws-creds.sh
 - chmod 0600 ~/.aws/credentials
 - sudo chown -R root:root ~/.aws/
-- docker-compose up -d --build
+- docker-compose up --build
 - docker container inspect confd_confd_1
-- docker exec -it confd_confd_1 sh -c "ls -la /usr/local/bin/"
+  #- docker exec -it confd_confd_1 sh -c "ls -la /usr/local/bin/"
 - ls -la target/
   
 script:

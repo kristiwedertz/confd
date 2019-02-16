@@ -17,4 +17,4 @@ RUN ls -la /usr/local/bin/ && which sh
 #RUN ln -s /usr/local/bin/entrypoint.sh /
 
 #ENTRYPOINT [ "entrypoint.sh" ]
-CMD [ "/bin/sh /usr/local/bin/entrypoint.sh" ]
+CMD [ "/usr/local/bin/entrypoint.sh" ]
