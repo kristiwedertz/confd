@@ -16,4 +16,4 @@ COPY manifest /
 #RUN ln -s /usr/local/bin/entrypoint.sh /
 
 #ENTRYPOINT [ "entrypoint.sh" ]
-CMD [ "/usr/local/bin/entrypoint.sh" ]
+CMD [ "sh /usr/local/bin/entrypoint.sh" ]
