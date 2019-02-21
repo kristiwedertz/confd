@@ -1,12 +1,14 @@
 services:
 - docker
 before_script:
-- docker -v
-- sudo chown -R root:root ./target/
-- ./aws-creds.sh
-- chmod 0600 ~/.aws/credentials
-- sudo chown -R root:root ~/.aws/
+- docker --version
+  #- sudo chown -R root:root ./target/
+  #- ./aws-creds.sh
+  #- chmod 0600 ~/.aws/credentials
+  #- sudo chown -R root:root ~/.aws/
 - docker-compose up --build
+
+script:
 - docker container inspect confd_confd_1
 - ls -la target/
   
