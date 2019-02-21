@@ -3,7 +3,7 @@ services:
 before_script:
 - docker --version
   #- sudo chown -R root:root ./target/
-  #- ./aws-creds.sh
+- ./aws-creds.sh
   #- chmod 0600 ~/.aws/credentials
   #- sudo chown -R root:root ~/.aws/
 - docker-compose up --build
