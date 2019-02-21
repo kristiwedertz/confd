@@ -8,11 +8,8 @@ before_script:
 - sudo chown -R root:root ~/.aws/
 - docker-compose up --build
 - docker container inspect confd_confd_1
-  #- docker exec -it confd_confd_1 sh -c "ls -la /usr/local/bin/"
 - ls -la target/
   
-script:
-- docker container ps | grep -q confd_confd_1
 env:
   global:
   - AWS_REGION=us-west-2
